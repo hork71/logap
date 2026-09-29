@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="fontawesome-free-5.7.2-web/css/all.min.css">
+  <link rel="stylesheet" href="css/jquery-ui-themes-1.12.1/themes/base/jquery-ui.css">
+  <!-- onderstaande voorkomt favicon.ico not found melding -->
+  <link rel="shortcut icon" href="#">
+  <link rel="stylesheet" href="css/sslogger_admin.css">
+  <link rel="stylesheet" href="css/tabs.css">
+  <script type="text/javascript" src="js/sorttable.js"></script>
+  <title>Sslogger Admin</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Nav -->
+    <nav class="main-nav">
+      <img class="logo" src="../images/linux_PNG23.png" alt="Linux">
+      <ul class="main-menu">
+        <li><a href="./sslogger_admin.html">Administratie</a></li>
+        <li><a href="./sslogger_rapport.html">Rapportage</a></li>
+        <li><a href="./live.html">Live</a></li>
+        <li><a href="./patch.html">Patch</a></li>
+      </ul>
+      <ul class="right-menu">
+        <li><a href="/"><i class="fas fa-home"></i></a></li>
+      </ul>
+    </nav>
+
+    <!-- Showcase -->
+    <div class="graf-container">
+      <svg class="line-chart" width="900" height="500"></svg>
+      <div id="stat-list" class="month-chart"></div>
+      <div class="tooltip">
+        <div class="tip-header">
+          <h3></h3>
+          <h4></h4>
+        </div>
+      </div>
+    </div>
+
+    <div id="my-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Modal Header</h2>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <h3></h3>
+        </div>
+      </div>
+    </div>
+    <div class="tabset">
+      <!-- Tab 1 -->
+      <input type="radio" name="tabset" id="tab1" aria-controls="tabel" checked>
+      <label for="tab1">Tabel</label>
+      <!-- Tab 2 -->
+      <input type="radio" name="tabset" id="tab2" aria-controls="stat">
+      <label for="tab2">Stat</label>
+      <!-- Tab 3 -->
+      <input type="radio" name="tabset" id="tab3" aria-controls="graf">
+      <label for="tab3">Trend</label>
+
+      <div class="tab-panels">
+        <section id="tabel" class="tab-panel">
+          <div id="data-list" class="table-responsive"></div>
+        </section>
+        <section id="stat" class="tab-panel">
+          <div id="list-stat"></div>
+        </section>
+        <section id="graf" class="tab-panel">
+          <div id="graf-stat">
+            <!-- slider en form moeten in een flex div -->
+            <div id="groepgraf">
+              <select id="groeplijst">
+                <!-- <option disabled selected>Selecteer een Groep</option> -->
+              </select>
+            </div>
+          </div>
+          <div id="groepgrafiek"></div>
+        </section>
+      </div>
+
+    </div>
+  </div>
+  <script src="js/d3.v5.min.js"></script>
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/sslogger_admin.js"></script>
+</body>
+
+</html>

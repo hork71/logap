@@ -1,0 +1,7 @@
+this is a nodejs application that needs to be migrated to a python flask application.
+
+- the current setup is server/client, the desired setup is a single app.py file with a static or public directory for the html templates and subdirectories in static/public for css and js.
+- assume the needed python libraries come from the ubuntu 24 repositories, so no need for pip in production
+- start with only the / route (index.html) and the /live and /report/:yearMonth routes
+- the live data comes from an external server via postgresql query and is written to a file (@node/server/data/sslogger/slog_live.csv), this needs to change in the new setup where the data needs to be written to a local postgresql database.
+

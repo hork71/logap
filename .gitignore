@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.env
+venv/
+node_modules/
+
+# Internal infrastructure data - not for git history
+data/accounts.txt
+data/prod_owner.txt
+node/server/accounts.txt
+node/server/prod_owner.txt
+node/server/data/sslogger/slog_live.csv

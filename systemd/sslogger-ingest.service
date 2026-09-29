@@ -1,0 +1,11 @@
+[Unit]
+Description=Ingest sslogger live events into local Postgres
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/logap
+EnvironmentFile=/opt/logap/.env
+ExecStart=/usr/bin/python3 /opt/logap/ingest_live.py
+User=logap

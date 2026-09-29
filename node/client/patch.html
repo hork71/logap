@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="fontawesome-free-5.7.2-web/css/all.min.css">
+  <!-- onderstaande voorkomt favicon.ico not found melding -->
+  <link rel="shortcut icon" href="#">
+  <link rel="stylesheet" href="css/server.css">
+  <link rel="stylesheet" href="css/patch.css">
+  <script type="text/javascript" src="js/sorttable.js"></script>
+  <title>Patch Detail</title>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="main-nav">
+      <img class="logo" src="../images/linux_PNG23.png" alt="Linux">
+      <ul class="main-menu">
+        <li><a href="./sslogger_admin.html">Administratie</a></li>
+        <li><a href="./sslogger_rapport.html">Rapportage</a></li>
+        <li><a href="./live.html">Live</a></li>
+        <li><a href="./patch.html">Patch</a></li>
+        <li><a href="./patch_totaal.html">Patch Overzicht</a></li>
+      </ul>
+
+      <ul class="right-menu">
+        <li><a href="/"><i class="fas fa-home"></i></a></li>
+      </ul>
+    </nav>
+
+    <div class="select-container">
+      <form id="patchfilter">
+        <select name="datum" id="datum"></select>
+        <select name="level1" id="level1"></select>
+        <select name="level2" id="level2"></select>
+        <select name="level3" id="level3"></select>
+        <button id="knop" type="submit">Go</button>
+      </form>
+    </div>
+    <div class="graf-container">
+      <div id="stat-list" class="month-chart"></div>
+      <div class="tooltip">
+        <div class="tip-header">
+          <h3></h3>
+          <h4></h4>
+        </div>
+      </div>
+    </div>
+    <div class="controls" id="wrapper">
+    </div>
+    <div class="modalWindow_container" id="modal1">
+      <div class="modalWindow">
+        <div>
+          <p id="titel"></p>
+        </div>
+        <div>
+          <table id="history">
+            <thead>
+              <tr>
+                <th>datum</th>
+                <th>kernel</th>
+                <th>sl</th>
+                <th>own</th>
+                <th>os</th>
+                <th>versie</th>
+              </tr>
+            </thead>
+            <tbody id="hist">
+            </tbody>
+          </table>
+        </div>
+        <div><button id="sluit">Close</button></div>
+      </div>
+    </div>
+    <div id="data-list" class="table-responsive"></div>
+  </div>
+  <script src="js/d3.v5.min.js"></script>
+  <!--<script type="text/javascript" src="js/patch.js"></script>-->
+  <script type="text/javascript" src="js/patch_0103.js"></script>
+</body>
+
+</html>

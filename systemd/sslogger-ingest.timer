@@ -1,0 +1,10 @@
+[Unit]
+Description=Run sslogger live ingest at :20 and :50 past the hour
+
+[Timer]
+OnCalendar=*-*-* *:20,50:00
+AccuracySec=1s
+Persistent=true
+
+[Install]
+WantedBy=timers.target

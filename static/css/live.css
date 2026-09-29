@@ -1,0 +1,286 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  color: #000;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+a {
+  color: #262626;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Nav */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 20px 0;
+  font-size: 13px;
+}
+
+.main-nav .logo {
+  width: 110px;;
+}
+
+.main-nav ul {
+  display: flex;
+}
+
+.main-nav ul li {
+  padding: 0 10px;
+}
+
+.main-nav ul li a {
+  padding-bottom: 2px;
+}
+
+.main-nav ul li a:hover {
+  border-bottom: 2px solid #262626;
+}
+
+.main-nav ul.main-menu {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  font-weight: bold;
+  padding: 10px 20px;
+  background: #262626;
+  color: #fff;
+  font-size: 15px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Showcase */
+.graf-container {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #d8d8d8;
+  background-color: #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+svg {
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  background-color: #fffff0;
+}
+
+text {
+  font-size: 1.2em;
+  font-family: sans-serif;
+}
+
+.controls {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+button,
+input[type=button] {
+  background-color: #777;
+  color: #fff;
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  padding: 3px 10px;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  transition: all 200ms;
+  cursor: pointer;
+}
+
+button:hover,
+input[type=button] {
+  background-color: #555;
+  color: #fff;
+}
+
+button:focus,
+input[type=button] {
+  background: #fff;
+  color: #777;
+}
+
+.floot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#zoek {
+  border: 1px solid #777;
+  border-radius: 5px;
+}
+
+::placeholder {
+  text-align: center;
+}
+
+#totaal {
+  font-size: 1.1rem;
+}
+
+.toggle-button {
+  background-color: #777;
+}
+
+#tables {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+#data-list {
+  margin-bottom: 35px;
+}
+
+#export {
+  margin-left: 45px;
+  color: #fff;
+  background-color: #777;
+}
+
+.table {
+  font-family: sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+table thead tr {
+  background-color: #778977;
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+}
+
+table th, table td {
+  padding: 5px 8px;
+  border: 1px solid black;
+}
+
+table tr:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+tr {
+  background-color: #f8f8f8;
+}
+
+td {
+  font-size: 0.7rem;
+}
+
+a.slink {
+  text-decoration: none;
+}
+
+a.slink:hover {
+  text-decoration: underline;
+}
+.tooltip {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  background: #eee;
+  max-width: 300px;
+}
+
+.tip-header {
+  border-bottom: 2px solid white;
+  padding: 0.5em 1rem;
+}
+
+.tip-body {
+  padding: 0.2rem 0;
+}
+
+h3, h4 {
+  font-size: 0.9em;
+  color: #555;
+  margin: 0;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+.filter {
+  display: none;
+}
+
+.select-container {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#stat-list svg {
+  background-color: #fff;
+}
+
+#groepnamen {
+  padding: 8px 12px;
+  margin-left: 20px;
+  color: #333333;
+  background-color: #eeeeee;
+  border: 1px solid #dddddd;
+  cursor: pointer;
+  border-radius: 5px;
+
+  /* Vervang standaard styling (pijl) */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="50"><polygon points="0,0 100,0 50,50" style="fill:%23666666;" /></svg>');
+  background-position: right 10px top 50%;
+  background-repeat: no-repeat;
+  background-size: 10px;
+  padding-right: 30px;
+}
+
+#groepnamen:focus,
+#groepnamen:hover {
+  outline: none;
+  border: 1px solid #bbbbbb;
+}
+
+#groepnamen option {
+  background: #ffffff;
+}
