@@ -34,6 +34,7 @@ def get_live_events(conn):
             SELECT event_date, event_time, server, service_level, tag,
                    account, groep, alias, reden, owner
             FROM sslogger_live
+            WHERE event_date >= CURRENT_DATE - INTERVAL '7 days'
             ORDER BY event_date DESC, event_time DESC
         """)
         rows = cur.fetchall()

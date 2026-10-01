@@ -7,19 +7,10 @@ function getPeriodFromQuery() {
   const parts = window.location.search.match(/\?start=(\d{4}-\d{2})/);
   if (parts) {
     return parts[1].replace(/-/, '');
-  } else {
-    const datum = new Date();
-    if (datum.getMonth() === 0) {
-      //return `${(datum.getFullYear()-1)}11`;
-      return `${(datum.getFullYear() - 1)}12`;
-    } else if (datum.getMonth() < 10) {
-      // temp hack => -1 niet vergeten :-)
-      return (datum.getFullYear() + "0" + (datum.getMonth()));
-    } else {
-      return `${datum.getFullYear()}${datum.getMonth()}`;
-    }
-    //return datum.getMonth() < 10 ? (datum.getFullYear() + "0" + datum.getMonth()) : `${datum.getFullYear()}${datum.getMonth()}`;
   }
+  const datum = new Date();
+  const maand = String(datum.getMonth() + 1).padStart(2, '0');
+  return `${datum.getFullYear()}${maand}`;
 }
 
 //const form = document.forms.periodeform;

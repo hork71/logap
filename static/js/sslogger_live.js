@@ -213,7 +213,7 @@ function createTable(data, groepnaam = undefined) {
   if (groepnaam) {
     data = data.filter(dat => dat.Groep === groepnaam);
   }
-  const columnHeadings = Object.keys(data[0]).filter(item => !['Alias', 'Tag'].includes(item));
+  const columnHeadings = ['Datum', 'Tijd', 'Server', 'SL', 'User', 'Groep', 'Reden', 'Owner'];
   const columnCount = columnHeadings.length;
   const rowCount = data.length;
   var div = document.createElement('div');
