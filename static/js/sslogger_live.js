@@ -1,4 +1,4 @@
-const API_URL = '/live';
+const API_URL = '/api/live';
 
 async function setUp(url) {
   const data = fetch(url)

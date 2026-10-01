@@ -1,4 +1,4 @@
-const API_URL = '/report';
+const API_URL = '/api/report';
 const periode = getPeriodFromQuery();
 
 //document.getElementById('start').setCustomValidity(' ');

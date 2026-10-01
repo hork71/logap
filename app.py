@@ -22,6 +22,16 @@ def index():
 
 
 @app.route('/live')
+def live_page():
+    return send_from_directory(app.static_folder, 'live.html')
+
+
+@app.route('/report')
+def report_page():
+    return send_from_directory(app.static_folder, 'report.html')
+
+
+@app.route('/api/live')
 def live():
     conn = get_local_connection()
     try:
@@ -30,7 +40,7 @@ def live():
         conn.close()
 
 
-@app.route('/report/<year_month>')
+@app.route('/api/report/<year_month>')
 def report(year_month):
     if not YEAR_MONTH_RE.match(year_month):
         return jsonify({'message': 'yearMonth must be in YYYYMM format'}), 400
